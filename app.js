@@ -53,13 +53,13 @@ app.post("/", function (request, response) {
           link = "https://mdbgo.io/ascensus/mdb-advanced/img/rain.gif";
           break;
         case "Clear":
-          link = "https://mdbgo.io/ascensus/mdb-advanced/img/clear.gif";
+          link = "https://thumbs.gfycat.com/EverlastingTightIrishterrier-size_restricted.gif";
           break;
         case "Thunderstorm":
           link = "https://mdbgo.io/ascensus/mdb-advanced/img/thunderstorm.gif";
           break;
         default:
-          link = "https://mdbgo.io/ascensus/mdb-advanced/img/clear.gif";
+          link = "https://thumbs.gfycat.com/EverlastingTightIrishterrier-size_restricted.gif";
           break;
       }
       response.render("weather", {
@@ -76,4 +76,4 @@ app.post("/", function (request, response) {
   });
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
