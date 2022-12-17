@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <section
+      class="vh-100"
+      style="background-image: url(<%=Theme%>);
+      background-size: cover; 
+      "
+    >
+      <div class="container py-5" style="position: relative; top: 20%;">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-md-9 col-lg-7 col-xl-5">
+            <div
+              id=""
+              class="text-white bg-image shadow-4-strong"
+              style="
+                background: transparent;
+                background-repeat: no-repeat;
+                background-size: cover;
+              "
+            >
+              <!-- Main current data -->
+              <div class="card-header p-4 border-0">
+                <div class="text-center mb-3">
+                  <p
+                    class="h2 mb-1"
+                    id="wrapper-name"
+                    style="text-transform: capitalize"
+                  >
+                    <%=cityname%>
+                  </p>
+                  <p class="mb-1" id="wrapper-description"><%=citydes%></p>
+                  <p class="display-1 mb-1" id="wrapper-temp">
+                    <%=citytemp%>°C
+                  </p>
+                  <span class=""
+                    >Pressure: <%=citypres%><span id="wrapper-pressure"></span
+                  ></span>
+                  <span class="mx-2">|</span>
+                  <span class=""
+                    >Humidity: <%=cityhumid%> %<span
+                      id="wrapper-humidity"
+                    ></span
+                  ></span>
+                </div>
+              </div>
+
+              <!-- Daily forecast -->
+              <div class="card-body px-5">
+                <div class="row align-items-center">
+                  <div class="col-lg-6">
+                    <strong>Max. Temprature</strong>
+                  </div>
+
+                  <div class="col-lg-2 text-center">
+                    <img id="wrapper-icon-today" src="" class="w-100" alt="" />
+                  </div>
+
+                  <div class="col-lg-4 text-end">
+                    <span id="wrapper-forecast-temp-today">
+                      <%=Maximum%>°C
+                    </span>
+                  </div>
+                </div>
+
+                <div class="row align-items-center">
+                  <div class="col-lg-6">
+                    <strong>Min. Temprature</strong>
+                  </div>
+
+                  <div class="col-lg-2 text-center">
+                    <img
+                      id="wrapper-icon-tomorrow"
+                      src=""
+                      class="w-100"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="col-lg-4 text-end">
+                    <span id="wrapper-forecast-temp-tomorrow">
+                      <%=Minimum%>°C</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
